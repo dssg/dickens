@@ -1,2 +1,3 @@
 # dickens
-Common Python descriptors
+
+Additional decorators implementing the descriptor interface.
