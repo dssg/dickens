@@ -3,7 +3,7 @@
 Additional decorators implementing the descriptor interface.
 
 """
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 
 class cachedproperty(object):
