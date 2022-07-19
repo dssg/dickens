@@ -42,6 +42,21 @@ A class ``property``, which caches its result in the data dictionary of the clas
     def badpi(cls):
         return 22 / 7
 
+class-only method
+-----------------
+
+A class method that **cannot** be accessed as an instance method::
+
+    from descriptors import classonlymethod
+
+    @classonlymethod
+    def circumference(cls, radius):
+        return 2 * cls.pi * radius
+
+The class-only method *may* be overshadowed by instance data set under the same name.
+
+Otherwise, instance access raises ``AttributeError`` (and such that it is forwarded to and *may* be handled by the instance's ``__getattr__``).
+
 Installation
 ============
 
