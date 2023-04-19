@@ -174,4 +174,7 @@ class cachedproperty:
 
         return value
 
-    __class_getitem__ = classmethod(types.GenericAlias)
+
+# Conditional to support Python 3.8
+if hasattr(types, 'GenericAlias'):
+    cachedproperty.__class_getitem__ = classmethod(types.GenericAlias)
